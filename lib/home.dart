@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'models/explore_recipe.dart';
 import 'components/components.dart';
+import 'models/explore_recipe.dart';
 import 'screens/explore_screen.dart';
+import 'screens/recipes_screen.dart';
+
 
 
 class Home extends StatefulWidget {
@@ -14,14 +16,8 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
-    Card2(
-        recipe: ExploreRecipe(
-            authorName: 'Mike Katz',
-            role: 'Smoothie Connoisseur',
-            profileImage: 'assets/profile_pics/person_katz.jpeg',
-            title: 'Recipe',
-            subtitle: 'Smoothies',
-            backgroundImage: 'assets/magazine_pics/mag2.png')),
+    RecipesScreen(),
+
     Card3(
         recipe: ExploreRecipe(
             title: 'Vegan Trends',
