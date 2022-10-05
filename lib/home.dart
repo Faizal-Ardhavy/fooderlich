@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'components/components.dart';
-import 'models/explore_recipe.dart';
 import 'screens/explore_screen.dart';
+import 'models/explore_recipe.dart';
+import 'components/components.dart';
 import 'screens/recipes_screen.dart';
-
-
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,7 +15,6 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
     RecipesScreen(),
-
     Card3(
         recipe: ExploreRecipe(
             title: 'Vegan Trends',
@@ -35,6 +32,7 @@ class _HomeState extends State<Home> {
             ],
             backgroundImage: 'assets/magazine_pics/mag3.png')),
   ];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -55,11 +53,11 @@ class _HomeState extends State<Home> {
             onTap: _onItemTapped,
             items: <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
-                  icon: Icon(Icons.card_giftcard), label: 'Card'),
+                  icon: Icon(Icons.explore), label: 'Explore'),
               const BottomNavigationBarItem(
-                  icon: Icon(Icons.card_giftcard), label: 'Card2'),
+                  icon: Icon(Icons.book), label: 'Recipes'),
               const BottomNavigationBarItem(
-                  icon: Icon(Icons.card_giftcard), label: 'Card3'),
+                  icon: Icon(Icons.list), label: 'To Buy'),
             ]));
   }
 }

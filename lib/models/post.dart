@@ -8,6 +8,7 @@ class Post {
       this.comment,
       this.foodPictureUrl,
       this.timestamp});
+
   Post.fromJson(Map<String, dynamic> json) {
     profileImageUrl = json['profileImageUrl'];
     comment = json['comment'];

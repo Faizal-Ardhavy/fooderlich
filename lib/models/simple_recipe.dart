@@ -4,8 +4,10 @@ class SimpleRecipe {
   String? duration;
   String? source;
   List<String>? information;
+
   SimpleRecipe(
       this.dishImage, this.title, this.duration, this.source, this.information);
+
   SimpleRecipe.fromJson(Map<String, dynamic> json) {
     dishImage = json['dishImage'];
     title = json['title'];

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import '/models/models.dart';
-import '/components/components.dart';
+import '../models/models.dart';
+import '../components/components.dart';
 
 class FriendPostListView extends StatelessWidget {
   final List<Post> friendPosts;
-
   const FriendPostListView({Key? key, required this.friendPosts})
       : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Padding(
